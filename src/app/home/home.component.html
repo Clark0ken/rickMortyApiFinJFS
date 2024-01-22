@@ -1,0 +1,59 @@
+
+<!-- home.component.html -->
+<div>
+    <h2>API rick y morty jorge</h2>
+    <ul>
+      <!--9.1 Con esta parte de aqui recorremos los datos-->
+      <li *ngFor="let character of data">
+        <div class="character-info">
+          <!--9.2 Por ultimo con esta nomenclatura vemos la informacion-->
+          <img [src]="character.image" alt="{{ character.name }} Image" />
+          <p>Nombre:
+            {{ character.name }}</p>
+          <p>Id:
+            {{ character.id }}</p>
+          <p>Estado:
+            {{ character.status }}</p>
+          <p>Especie:
+            {{ character.species }}</p>
+          <p>Genero:
+            {{ character.gender }}</p>
+         
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+<!-- 
+
+<div>
+    <h2>API rick y morty jorge</h2>
+    <ul>
+        <li *ngFor="let character of data">
+            <div class="character-info">
+                <img [src]="character.image" alt="{{ character.name }} Image" />
+                <p>Nombre: {{ character.name }}</p>
+                <p>Id: {{ character.id }}</p>
+                <p>Estado: {{ character.status }}</p>
+                <p>Especie: {{ character.species }}</p>
+                <p>Genero: {{ character.gender }}</p>
+
+            
+                <ul>
+                    <li *ngFor="let location of character.locations">
+                        <div class="location-info">
+                            <p>Nombre: {{ location.name }}</p>
+                            <p>Id: {{ location.id }}</p>
+                            <p>Tipo: {{ location.type }}</p>
+                            <p>Dimensión: {{ location.dimension }}</p>
+                            <p>Residentes: {{ location.residents?.length || 'N/A' }}</p>
+                        
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+-->
